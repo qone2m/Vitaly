@@ -1,0 +1,18 @@
+# Original photos (too large for GitHub Pages)
+Фото/
+
+# Build/utility scripts
+optimize_images.py
+_gen_gallery.py
+_gallery_fragment.html
+
+# Source document
+*.docx
+
+# System
+.DS_Store
+Thumbs.db
+desktop.ini
+__pycache__/
+*.pyc
+node_modules/

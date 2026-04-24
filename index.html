@@ -3,12 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ВитМет — монтаж и демонтаж металлоконструкций в Раменском и Московской области. Заборы, ворота, навесы, лестницы, вентиляция. Опыт более 5 лет.">
-    <title>ВитМет — Металлоконструкции | Раменское, МО</title>
+    <meta name="description" content="ВитМет — монтаж и демонтаж металлоконструкций в Раменском и Московской области. Заборы, ворота, навесы, лестницы, вентиляция. Опыт более 5 лет, 177+ реализованных проектов.">
+    <meta name="theme-color" content="#1a1a2e">
+    <title>ВитМет — Металлоконструкции в Раменском и МО | Заборы, навесы, лестницы</title>
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ВитМет — Металлоконструкции в Раменском и МО">
+    <meta property="og:description" content="Монтаж и демонтаж заборов, навесов, лестниц, вентиляции. Опыт 5+ лет. Выезд за 24 часа.">
+    <meta property="og:locale" content="ru_RU">
+
+    <!-- Favicon (inline SVG) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231a1a2e'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial,sans-serif' font-weight='800' font-size='30' fill='%23e67e22'%3EВ%3C/text%3E%3C/svg%3E">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Schema.org LocalBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "ВитМет",
+      "description": "Монтаж и демонтаж металлоконструкций: заборы, ворота, навесы, лестницы, вентиляция",
+      "telephone": "+79999999999",
+      "areaServed": "Раменское, Московская область",
+      "address": { "@type": "PostalAddress", "addressLocality": "Раменское", "addressRegion": "Московская область", "addressCountry": "RU" },
+      "openingHours": "Mo-Su 08:00-19:00"
+    }
+    </script>
 </head>
 <body>
 
@@ -22,6 +47,7 @@
             <nav class="header__nav" id="nav">
                 <a href="#about" class="nav__link">О нас</a>
                 <a href="#services" class="nav__link">Услуги</a>
+                <a href="#process" class="nav__link">Процесс</a>
                 <a href="#portfolio" class="nav__link">Портфолио</a>
                 <a href="#contacts" class="nav__link">Контакты</a>
             </nav>
@@ -38,48 +64,122 @@
     <!-- ===== HERO ===== -->
     <section class="hero" id="hero">
         <div class="hero__overlay"></div>
+        <div class="hero__grid" aria-hidden="true"></div>
         <div class="container hero__content">
-            <h1 class="hero__title">Металлоконструкции<br><span>в Раменском и МО</span></h1>
+            <span class="hero__badge">
+                <span class="hero__badge-dot"></span>
+                Работаем в Раменском и МО
+            </span>
+            <h1 class="hero__title">Металлоконструкции<br><span>под&nbsp;ключ</span></h1>
             <p class="hero__subtitle">Наша команда квалифицированных специалистов поможет вам осуществить качественный монтаж и демонтаж металлоконструкций</p>
             <div class="hero__actions">
                 <a href="tel:+79999999999" class="btn btn--primary btn--large">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                    Позвонить
+                    Позвонить сейчас
                 </a>
-                <a href="https://vk.com/id149165167" target="_blank" rel="noopener" class="btn btn--outline btn--large">Написать в ВК</a>
+                <a href="#services" class="btn btn--outline btn--large">Наши услуги</a>
+            </div>
+            <div class="hero__stats">
+                <div class="hero-stat">
+                    <div class="hero-stat__num" data-count="177">0</div>
+                    <div class="hero-stat__label">проектов</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat__num" data-count="5" data-suffix="+">0</div>
+                    <div class="hero-stat__label">лет опыта</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat__num" data-count="24" data-suffix="ч">0</div>
+                    <div class="hero-stat__label">выезд</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat__num" data-count="100" data-suffix="%">0</div>
+                    <div class="hero-stat__label">гарантия</div>
+                </div>
             </div>
         </div>
+        <a href="#about" class="hero__scroll" aria-label="Вниз">
+            <span class="hero__scroll-mouse"><span></span></span>
+        </a>
     </section>
 
     <!-- ===== ABOUT ===== -->
     <section class="about" id="about">
         <div class="container">
-            <h2 class="section__title section__title--light">О компании</h2>
-            <p class="section__subtitle section__subtitle--light">ВитМет — надёжный партнёр в мире металлоконструкций</p>
+            <h2 class="section__title section__title--light reveal">О компании</h2>
+            <p class="section__subtitle section__subtitle--light reveal">ВитМет — надёжный партнёр в мире металлоконструкций. Работаем быстро, аккуратно и по договору.</p>
             <div class="about__grid">
-                <div class="about-card">
-                    <div class="about-card__value">5+</div>
-                    <div class="about-card__label">лет опыта</div>
+                <div class="about-card reveal">
+                    <div class="about-card__icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                    </div>
+                    <div class="about-card__title">Опыт более 5 лет</div>
+                    <div class="about-card__label">Сотни реализованных проектов в МО</div>
                 </div>
-                <div class="about-card">
-                    <div class="about-card__value">≈</div>
-                    <div class="about-card__label">Стоимость работ договорная</div>
+                <div class="about-card reveal">
+                    <div class="about-card__icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    </div>
+                    <div class="about-card__title">Стоимость договорная</div>
+                    <div class="about-card__label">Считаем честно, после замера на объекте</div>
                 </div>
-                <div class="about-card">
-                    <div class="about-card__value">&#x1F4B3;</div>
-                    <div class="about-card__label">Наличные и по счёту</div>
+                <div class="about-card reveal">
+                    <div class="about-card__icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                    </div>
+                    <div class="about-card__title">Наличные и по счёту</div>
+                    <div class="about-card__label">Удобная оплата как для физ., так и для юр. лиц</div>
                 </div>
-                <div class="about-card">
-                    <div class="about-card__value">8—19</div>
-                    <div class="about-card__label">Без выходных и праздников</div>
+                <div class="about-card reveal">
+                    <div class="about-card__icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <div class="about-card__title">С 8:00 до 19:00</div>
+                    <div class="about-card__label">Работаем без выходных и праздников</div>
                 </div>
-                <div class="about-card">
-                    <div class="about-card__value">24ч</div>
-                    <div class="about-card__label">Выезд на объект</div>
+                <div class="about-card reveal">
+                    <div class="about-card__icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                    </div>
+                    <div class="about-card__title">Выезд за 24 часа</div>
+                    <div class="about-card__label">Приедем на замер в течение суток после заявки</div>
                 </div>
-                <div class="about-card">
-                    <div class="about-card__value">&#10003;</div>
-                    <div class="about-card__label">Гарантия по договору</div>
+                <div class="about-card reveal">
+                    <div class="about-card__icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+                    </div>
+                    <div class="about-card__title">Гарантия по договору</div>
+                    <div class="about-card__label">Фиксируем все обязательства в договоре</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROCESS ===== -->
+    <section class="process" id="process">
+        <div class="container">
+            <h2 class="section__title reveal">Как мы работаем</h2>
+            <p class="section__subtitle reveal">Прозрачный процесс от заявки до готового объекта</p>
+            <div class="process__grid">
+                <div class="process-step reveal">
+                    <div class="process-step__num">01</div>
+                    <h3 class="process-step__title">Заявка</h3>
+                    <p class="process-step__text">Позвоните или напишите в мессенджер — обсудим задачу и предварительные условия</p>
+                </div>
+                <div class="process-step reveal">
+                    <div class="process-step__num">02</div>
+                    <h3 class="process-step__title">Выезд и замер</h3>
+                    <p class="process-step__text">Приезжаем на объект, проводим замеры, согласуем материалы и рассчитываем смету</p>
+                </div>
+                <div class="process-step reveal">
+                    <div class="process-step__num">03</div>
+                    <h3 class="process-step__title">Монтаж</h3>
+                    <p class="process-step__text">Выполняем работы точно в срок. Используем проверенные материалы и профессиональное оборудование</p>
+                </div>
+                <div class="process-step reveal">
+                    <div class="process-step__num">04</div>
+                    <h3 class="process-step__title">Гарантия</h3>
+                    <p class="process-step__text">Сдаём объект, подписываем договор и предоставляем гарантию на все выполненные работы</p>
                 </div>
             </div>
         </div>
@@ -88,8 +188,8 @@
     <!-- ===== SERVICES ===== -->
     <section class="services" id="services">
         <div class="container">
-            <h2 class="section__title">Наши услуги</h2>
-            <p class="section__subtitle">Изготовление и монтаж металлоконструкций любой сложности</p>
+            <h2 class="section__title reveal">Наши услуги</h2>
+            <p class="section__subtitle reveal">Изготовление и монтаж металлоконструкций любой сложности</p>
             <div class="services__grid">
                 <a href="#portfolio" class="service-card" data-filter="fences">
                     <div class="service-card__icon">
@@ -130,8 +230,8 @@
     <!-- ===== PORTFOLIO ===== -->
     <section class="portfolio" id="portfolio">
         <div class="container">
-            <h2 class="section__title">Наши работы</h2>
-            <p class="section__subtitle">Более 170 реализованных проектов в Раменском и Московской области</p>
+            <h2 class="section__title reveal">Наши работы</h2>
+            <p class="section__subtitle reveal">Более 170 реализованных проектов в Раменском и Московской области</p></p>
 
             <div class="portfolio__filters">
                 <button class="filter-btn active" data-filter="all">Все <span class="filter-count">177</span></button>
@@ -323,11 +423,28 @@
         </div>
     </section>
 
+    <!-- ===== CTA ===== -->
+    <section class="cta">
+        <div class="container cta__inner reveal">
+            <div class="cta__text">
+                <h2 class="cta__title">Нужна консультация?</h2>
+                <p class="cta__subtitle">Позвоните или напишите — подскажем, рассчитаем стоимость и выедем на замер</p>
+            </div>
+            <div class="cta__actions">
+                <a href="tel:+79999999999" class="btn btn--primary btn--large">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    Позвонить
+                </a>
+                <a href="https://vk.com/id149165167" target="_blank" rel="noopener" class="btn btn--light btn--large">Написать в ВК</a>
+            </div>
+        </div>
+    </section>
+
     <!-- ===== CONTACTS ===== -->
     <section class="contacts" id="contacts">
         <div class="container">
-            <h2 class="section__title">Контакты</h2>
-            <p class="section__subtitle">Свяжитесь со мной любым удобным способом</p>
+            <h2 class="section__title reveal">Контакты</h2>
+            <p class="section__subtitle reveal">Свяжитесь с нами любым удобным способом</p>
             <div class="contacts__grid">
                 <a href="tel:+79999999999" class="contact-card">
                     <div class="contact-card__icon">
@@ -372,6 +489,11 @@
             </div>
         </div>
     </footer>
+
+    <!-- ===== FLOATING CALL BUTTON (mobile) ===== -->
+    <a href="tel:+79999999999" class="fab-call" aria-label="Позвонить">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    </a>
 
     <!-- ===== LIGHTBOX ===== -->
     <div class="lightbox" id="lightbox">

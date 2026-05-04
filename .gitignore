@@ -6,6 +6,7 @@
 optimize_images.py
 _gen_gallery.py
 _gallery_fragment.html
+update_gallery.py
 
 # Source document
 *.docx

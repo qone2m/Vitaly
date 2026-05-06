@@ -940,33 +940,70 @@ a {
 .footer {
     background: var(--clr-dark);
     color: rgba(255, 255, 255, 0.6);
-    padding: 32px 0;
 }
 
-.footer__inner {
+.footer__top {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 40px;
+    padding: 48px 0 40px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.footer__col--brand p {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    margin-top: 12px;
+}
+
+.footer__logo {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fff;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 16px;
+    gap: 8px;
 }
 
-.footer__copy {
-    font-size: 0.88rem;
+.footer__logo .logo__icon {
+    color: var(--clr-accent);
 }
 
-.footer__links {
+.footer__col-title {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.35);
+    margin-bottom: 14px;
+}
+
+.footer__contacts {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
-    gap: 24px;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.footer__links a {
-    font-size: 0.88rem;
+.footer__contacts a {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.6);
     transition: color var(--transition);
 }
 
-.footer__links a:hover {
+.footer__contacts a:hover {
     color: var(--clr-accent);
+}
+
+.footer__bottom {
+    padding: 20px 0;
+}
+
+.footer__copy {
+    font-size: 0.82rem;
+    text-align: center;
 }
 
 /* ===== LIGHTBOX ===== */
@@ -1197,9 +1234,10 @@ a {
         margin-bottom: 32px;
     }
 
-    .footer__inner {
-        flex-direction: column;
-        text-align: center;
+    .footer__top {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding: 36px 0 28px;
     }
 
     .lightbox__prev {

@@ -132,22 +132,44 @@ a {
 }
 
 .header__logo {
-    font-size: 1.15rem;
-    font-weight: 700;
     color: #fff;
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 12px;
+    text-decoration: none;
 }
 
-.logo__icon {
+.logo__mark {
+    flex-shrink: 0;
+    filter: drop-shadow(0 2px 8px rgba(230, 126, 34, 0.45));
+    transition: filter var(--transition), transform var(--transition);
+}
+
+.header__logo:hover .logo__mark {
+    filter: drop-shadow(0 3px 12px rgba(230, 126, 34, 0.7));
+    transform: rotate(6deg) scale(1.05);
+}
+
+.logo__text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.logo__name {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -0.01em;
+}
+
+.logo__sub {
+    font-size: 0.6rem;
+    font-weight: 600;
     color: var(--clr-accent);
-    font-size: 1.4rem;
-}
-
-.logo__accent {
-    font-weight: 400;
-    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    opacity: 0.9;
 }
 
 .header__nav {
@@ -957,16 +979,19 @@ a {
 }
 
 .footer__logo {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #fff;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 12px;
 }
 
-.footer__logo .logo__icon {
-    color: var(--clr-accent);
+.footer__logo .logo__name {
+    font-size: 1rem;
+    color: #fff;
+}
+
+.footer__logo .logo__sub {
+    color: rgba(255, 255, 255, 0.45);
+    opacity: 1;
 }
 
 .footer__col-title {
@@ -1134,7 +1159,7 @@ a {
         display: flex;
     }
 
-    .logo__accent {
+    .logo__sub {
         display: none;
     }
 

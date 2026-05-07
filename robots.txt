@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /update_gallery.py
+Disallow: /optimize_images.py
+Disallow: /_gen_gallery.py
+Disallow: /_gallery_fragment.html
+
+Sitemap: https://qone2m.github.io/Vitaly/sitemap.xml

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, follow">
+    <title>404 — Страница не найдена | Заборы ПрофМет</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231a1a2e'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial,sans-serif' font-weight='800' font-size='30' fill='%23e67e22'%3EЗ%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .error-page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 20px;
+            background: var(--clr-light);
+        }
+        .error-code {
+            font-size: clamp(5rem, 20vw, 10rem);
+            font-weight: 800;
+            line-height: 1;
+            color: var(--clr-dark);
+            position: relative;
+            display: inline-block;
+        }
+        .error-code::after {
+            content: '';
+            position: absolute;
+            bottom: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60%;
+            height: 6px;
+            background: var(--clr-accent);
+            border-radius: 3px;
+        }
+        .error-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--clr-dark);
+            margin: 24px 0 12px;
+        }
+        .error-text {
+            color: var(--clr-text-muted);
+            max-width: 420px;
+            margin-bottom: 36px;
+            line-height: 1.7;
+        }
+        .error-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 48px;
+            color: var(--clr-dark);
+            font-weight: 800;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <main class="error-page">
+        <a href="index.html" class="error-logo">
+            <svg width="42" height="42" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M22 2L42 22L22 42L2 22Z" fill="#e67e22"/>
+                <path d="M11 13L22 30L33 13L29 13L22 25L15 13Z" fill="white"/>
+            </svg>
+            Заборы ПрофМет
+        </a>
+        <div class="error-code">404</div>
+        <h1 class="error-title">Страница не найдена</h1>
+        <p class="error-text">Возможно, страница была перемещена или удалена. Воспользуйтесь ссылкой ниже, чтобы вернуться на главную.</p>
+        <a href="index.html" class="btn btn--primary btn--large">← На главную страницу</a>
+    </main>
+</body>
+</html>

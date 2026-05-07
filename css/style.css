@@ -1248,9 +1248,13 @@ a {
     }
 
     .footer__top {
-        grid-template-columns: 1fr;
-        gap: 28px;
+        grid-template-columns: 1fr 1fr;
+        gap: 28px 16px;
         padding: 36px 0 28px;
+    }
+
+    .footer__col--brand {
+        grid-column: 1 / -1;
     }
 
     .lightbox__prev {

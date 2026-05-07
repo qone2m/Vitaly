@@ -18,6 +18,7 @@
     let visibleItems = [];
     let currentIndex = 0;
     let touchStartX = 0;
+    let lightboxOpener = null;
 
     // ===== Mobile nav overlay =====
     const overlay = document.createElement('div');
@@ -38,6 +39,15 @@
         burger.classList.toggle('active', isOpen);
         overlay.classList.toggle('active', isOpen);
         document.body.style.overflow = isOpen ? 'hidden' : '';
+        burger.setAttribute('aria-expanded', String(isOpen));
+        burger.setAttribute('aria-label', isOpen ? 'Закрыть меню' : 'Открыть меню');
+        overlay.setAttribute('aria-hidden', String(!isOpen));
+        if (isOpen) {
+            const firstLink = nav.querySelector('.nav__link');
+            if (firstLink) firstLink.focus();
+        } else {
+            burger.focus();
+        }
     }
 
     burger.addEventListener('click', function () { toggleMenu(); });
@@ -100,12 +110,18 @@
         lightboxCounter.textContent = (index + 1) + ' / ' + visibleItems.length;
         lightbox.classList.add('active');
         document.body.style.overflow = 'hidden';
+        lightbox.querySelector('.lightbox__close').focus();
     }
 
     function closeLightbox() {
         lightbox.classList.remove('active');
         document.body.style.overflow = '';
         lightboxImg.src = '';
+        if (lightboxOpener) {
+            var item = lightboxOpener.closest('.gallery-item');
+            if (item) item.focus();
+            lightboxOpener = null;
+        }
     }
 
     function nextImage() {
@@ -121,7 +137,10 @@
         var item = e.target.closest('.gallery-item');
         if (!item || item.classList.contains('hidden')) return;
         var idx = visibleItems.indexOf(item);
-        if (idx !== -1) openLightbox(idx);
+        if (idx !== -1) {
+            lightboxOpener = item.querySelector('img');
+            openLightbox(idx);
+        }
     });
 
     // Lightbox controls
@@ -136,6 +155,7 @@
 
     // Keyboard navigation
     document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('open')) { toggleMenu(false); return; }
         if (!lightbox.classList.contains('active')) return;
         if (e.key === 'Escape') closeLightbox();
         if (e.key === 'ArrowRight') nextImage();
